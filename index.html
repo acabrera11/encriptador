@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>flexbox</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>
+                <img src="img/Logo.svg" alt="">
+            </h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="encriptar">
+            <div class="nieto1">
+                <textarea type="text" placeholder="Ingrese texto aquí" autofocus id="mensaje" class="textarea_msn"  required
+                onkeypress="return ((event.charCode>=97 && event.charCode <=122)||(event.charCode==32))"></textarea>
+            </div>
+            <div class="leyenda"><!--Nieto 2-->
+                <p>&#10071&#10071 Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="nieto3">
+                <button class="btn_encripta" type="button" onclick="encriptar()">Encriptar</button>
+                <button class="btn_desencripta" type="button" id="desencripta" value="Desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="encriptado"><!--Hijo 2-->
+            <div class="contenedor-resultado">
+                <!--<p id="parrafo_llenado" class="texto-resultado"></p>-->
+                <textarea readonly="readonly" id="parrafo_llenado" title="r" class="textarea_msn2 texto-resultado"></textarea>
+            </div>
+            <div class="caja_imagen">
+                <img src="img/Muñeco.svg" alt="" class="imagen">
+            </div>
+            <div class="texto_informativo" id="mensaje_encriptado">
+                <h2 id="mensaje_informativo">Ningún mensaje fue encontrado</h2>
+            <p id="parrafo">
+                Ingresa el texto que deseas encriptar o desencriptar
+            </p>
+
+            </div>
+            <div class="caja_copiar"><!--Nieto 6-->
+                <input value="&#8647 Copiar y Pegar" class="btn_copia" type="button" id="copia" onmousedown="copiar();">
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>
+          Creado por Augusto Cabrera
+        </p>
+      </footer>
+</body>
+<script src="script.js"></script>
+</html>
